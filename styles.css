@@ -2,10 +2,6 @@ html {
   background-color: bisque;
 }
 
-h1 {
-  color: chocolate;
-}
-
 body {
   text-align: center;
   font-family: "Poppins", serif;
@@ -19,6 +15,38 @@ footer {
   bottom: 20px;
 }
 
+h1 {
+  margin-bottom: 40px;
+}
+
+#navigation {
+  display: inline-flex;
+  gap: 20px;
+  flex-direction: row;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#navigation > * {
+  font-size: 1.1rem;
+}
+
+.navigation > li {
+  list-style: none;
+}
+
+.navigation {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 #main-section {
   position: relative;
   text-align: center;
@@ -30,10 +58,41 @@ footer {
   height: 500px;
 }
 
-#description {
-  font-size: 14pt;
-}
-
 #signature {
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#about-section {
+  display: flex;
+  padding-top: 60px;
+  justify-content: center;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  width: 600px;
+  font-size: 14pt;
+  text-align: left;
+}
+
+#about-image {
+  border: solid black;
+  width: 800px;
+  height: 500px;
+}
+
+#photo-gallery {
+  display: grid;
+  grid-template-columns: 800px 800px;
+  grid-template-rows: 500px 500px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photo-item {
+  width: 800px;
+  height: 500px;
 }
