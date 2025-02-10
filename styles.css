@@ -44,6 +44,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  #about-section {
+    gap: 0px;
+  }
   .about-image {
     max-width: 100%;
   }

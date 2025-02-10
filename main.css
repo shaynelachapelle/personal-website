@@ -60,10 +60,11 @@ body {
 
 @media screen and (max-width: 900px) {
   #main-image img {
-    width: 75%;
+    width: 80%;
+    margin-bottom: 20px;
   }
   #signature img {
-    width: 60%;
+    width: 80%;
   }
 }
 
