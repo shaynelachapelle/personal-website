@@ -43,6 +43,19 @@ body {
   max-height: 100%;
 }
 
+#photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#photo-gallery img {
+  max-width: 40%;
+}
+
 @media screen and (max-width: 900px) {
   #about-section {
     gap: 0px;
@@ -53,16 +66,11 @@ body {
   .about-text {
     max-width: 100%;
   }
-}
-
-#photo-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 30px;
-  margin: 40px;
-}
-
-#photo-gallery img {
-  width: 100%;
+  #photo-gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #photo-gallery img {
+    max-width: 100%;
+  }
 }

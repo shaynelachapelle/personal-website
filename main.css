@@ -58,16 +58,16 @@ body {
   width: 45%;
 }
 
+#main-image {
+  vertical-align: center;
+}
+
 @media screen and (max-width: 900px) {
   #main-image img {
-    width: 80%;
-    margin-bottom: 20px;
+    width: 90%;
+    margin-bottom: 40px;
   }
   #signature img {
     width: 80%;
   }
-}
-
-#main-image {
-  vertical-align: center;
 }
