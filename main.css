@@ -11,6 +11,16 @@ body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: gWeiss;
+  src: url(GABRWFFR.TTF);
+}
+
+h1 {
+  font-family: gWeiss;
+  font-size: 45pt;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -45,7 +55,7 @@ body {
   grid-template-rows: auto auto auto;
   justify-content: center;
   vertical-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 

@@ -8,6 +8,17 @@ body {
   font-weight: 500;
 }
 
+@font-face {
+  font-family: gWeiss;
+  src: url(GABRWFFR.TTF);
+}
+
+h1 {
+  font-size: 40pt;
+  font-family: gWeiss;
+  margin: 50px;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -19,8 +30,9 @@ body {
   gap: 40px;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80vh;
-  margin: 20px;
+  height: 70vh;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .about-text {
@@ -48,6 +60,7 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   margin: 10px;
+  margin-bottom: 40px;
   justify-content: center;
   align-items: center;
 }
