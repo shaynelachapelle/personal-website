@@ -19,22 +19,30 @@ body {
 h1 {
   font-family: gWeiss;
   font-size: 45pt;
+  margin-top: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .bold {
   font-weight: bold;
 }
 
-#navigation {
+#navbar {
   display: inline-flex;
   gap: 10px;
   flex-direction: row;
-  padding: 10px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-#navigation > * {
+#navbar > * {
   font-size: 1.1rem;
 }
 
@@ -45,17 +53,13 @@ h1 {
 .navigation {
   display: flex;
   text-align: center;
-  padding: 10px;
-  gap: 20px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 #main-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
   justify-content: center;
   vertical-align: center;
-  margin-top: 10px;
   margin-bottom: 30px;
 }
 
