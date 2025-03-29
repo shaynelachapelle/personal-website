@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   background-color: bisque;
 }
@@ -18,9 +24,10 @@ body::-webkit-scrollbar {
 }
 
 h1 {
-  font-size: 40pt;
   font-family: gWeiss;
-  margin: 50px;
+  font-size: 45pt;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .navigation a {
@@ -33,13 +40,16 @@ h1 {
 }
 
 #navbar {
+  position: sticky;
+  top: 0;
+  background-color: bisque;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  align-items: center;
   width: 100%;
+  height: 80px;
 }
 
 #navbar > * {
@@ -59,6 +69,25 @@ h1 {
 
 .bold {
   font-weight: bold;
+}
+
+#main-section {
+  justify-content: center;
+  vertical-align: center;
+  margin-bottom: 30px;
+}
+
+#signature {
+  margin-bottom: 20px;
+}
+
+#main-image img {
+  border: solid black;
+  width: 50%;
+}
+
+#main-image {
+  vertical-align: center;
 }
 
 #about-section {
@@ -117,8 +146,16 @@ h1 {
 }
 
 @media screen and (max-width: 900px) {
+  #main-image img {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  #signature img {
+    width: 80%;
+  }
   #about-section {
     gap: 20px;
+    margin-top: 40px;
   }
   .about-image {
     max-width: 100%;
@@ -129,6 +166,7 @@ h1 {
   #photo-gallery {
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
   }
   #photo-gallery img {
     max-width: 100%;
