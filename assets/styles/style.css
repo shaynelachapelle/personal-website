@@ -83,6 +83,7 @@ h1 {
   border: solid black;
   max-width: 100%;
   max-height: 65vh;
+  box-shadow: 2px 2px 5px black;
 }
 
 #main-image {
@@ -127,6 +128,8 @@ h1 {
 .about-image img {
   max-width: 100%;
   max-height: 100%;
+  box-shadow: 3px 3px 5px black;
+  border: solid black;
 }
 
 #photo-gallery {
@@ -152,11 +155,21 @@ h1 {
   gap: 15px;
 }
 
+/*
 #socials svg {
   transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 #socials a:hover svg {
+  transform: scale(1.2);
+}
+*/
+
+.grow {
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.grow:hover {
   transform: scale(1.2);
 }
 
