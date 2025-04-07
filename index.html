@@ -19,9 +19,11 @@
   <body>
     <nav>
       <div class="page navigation">
-        <li class="grow"><a href="#home-section">HOME</a></li>
-        <li class="grow"><a href="#about-section">ABOUT</a></li>
-        <li class="grow"><a href="#photos-section">PHOTOS</a></li>
+        <li class="grow underline-slide"><a href="#home-section">HOME</a></li>
+        <li class="grow underline-slide"><a href="#about-section">ABOUT</a></li>
+        <li class="grow underline-slide">
+          <a href="#photos-section">PHOTOS</a>
+        </li>
       </div>
     </nav>
     <section id="home-section">
@@ -38,6 +40,7 @@
           />
         </a>
       </div>
+      <a href="#about-section" class="pulse down-arrow">&#8595;</a>
     </section>
 
     <section id="about-section">
@@ -49,7 +52,9 @@
         <p>
           Undergraduate student currently obtaining a Bachelor's of Science in
           Computer Science at
-          <a href="https://en.wikipedia.org/wiki/McGill_University"
+          <a
+            href="https://en.wikipedia.org/wiki/McGill_University"
+            class="underline-slide"
             >McGill University</a
           >
           with a minor in Entrepreneurship.
@@ -57,12 +62,18 @@
         <br />
         <p>
           Financial Literacy Mentor at
-          <a href="https://www.pennydrops.org/">PennyDrops</a>.
+          <a href="https://www.pennydrops.org/" class="underline-slide"
+            >PennyDrops</a
+          >.
         </p>
         <br />
         <p>
           Born and raised in
-          <a href="https://en.wikipedia.org/wiki/Montreal">Montreal</a>.
+          <a
+            href="https://en.wikipedia.org/wiki/Montreal"
+            class="underline-slide"
+            >Montreal</a
+          >.
         </p>
 
         <br />
@@ -96,6 +107,20 @@
               />
             </svg>
           </a>
+          <a class="grow" href="mailto:slachapelle02@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-envelope-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
 
@@ -107,6 +132,38 @@
       </div>
     </section>
 
-    <section id="photos-section"></section>
+    <section id="photos-section">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide">
+            <img src="assets/images/25310004.JPG" alt="" />
+          </div>
+          <div class="slide">
+            <img src="assets/images/25310008.JPG" alt="" />
+          </div>
+          <div class="slide">
+            <img src="assets/images/25310012.JPG" alt="" />
+          </div>
+          <div class="slide">
+            <img src="assets/images/25310010.JPG" alt="" />
+          </div>
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+        <div class="dots-container"></div>
+        <div class="caption">...</div>
+      </div>
+      <p class="photo-text">
+        Lately I've been getting into film photography. Here are some of my
+        favorite shots from recent trips, currently featuring
+        <a
+          href="https://en.wikipedia.org/wiki/Banff,_Alberta"
+          class="underline-slide"
+          >Banff, AB</a
+        >.
+      </p>
+      <img src="assets/images/25310005.JPG" />
+    </section>
   </body>
 </html>
