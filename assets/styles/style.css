@@ -58,6 +58,18 @@ h1 {
   font-size: 3.8rem;
   margin-top: 20px;
   margin-bottom: 40px;
+  text-shadow: #333 1px 1px 1px;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+  outline: none;
+}
+
+img {
+  border-radius: 20px;
+  vertical-align: bottom;
 }
 
 .navigation a {
@@ -88,12 +100,13 @@ h1 {
   border: solid black;
   max-width: 100%;
   max-height: 65vh;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 4px 4px 5px black;
 }
 
 #main-image {
   vertical-align: center;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 #home-section {
@@ -200,6 +213,7 @@ h1 {
   position: relative;
   overflow: hidden;
   margin: 30px auto;
+  border-radius: 20px;
 }
 
 .carousel {
@@ -251,28 +265,6 @@ h1 {
   right: 10px;
 }
 
-.dots-container {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: white;
-}
-
 .caption {
   position: absolute;
   bottom: 40px;
@@ -313,6 +305,44 @@ h1 {
   color: inherit;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+}
+
+.shine {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shine::before {
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.shine:hover::before,
+.shine:focus::before {
+  animation: shine 0.85s;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 
 @media screen and (max-width: 900px) {

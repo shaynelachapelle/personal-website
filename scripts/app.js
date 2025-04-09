@@ -3,30 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".slide");
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
-  const dotsContainer = document.querySelector(".dots-container");
   const caption = document.querySelector(".caption");
 
   const captions = ["Banff 2024", "Banff 2024", "Banff 2024", "Banff 2024"];
 
   let currentIndex = 0;
 
-  // Create dots for navigation
-  slides.forEach((_, index) => {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    if (index === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goToSlide(index));
-    dotsContainer.appendChild(dot);
-  });
-
   // Function to update the carousel
   function updateCarousel() {
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    // Update active dot
-    document.querySelectorAll(".dot").forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentIndex);
-    });
 
     // Update caption
     caption.textContent = captions[currentIndex];
@@ -55,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextBtn.addEventListener("click", nextSlide);
 
   // Auto-play (optional)
-  let interval = setInterval(nextSlide, 3000);
+  let interval = setInterval(nextSlide, 4000);
 
   // Pause auto-play on hover
   carousel.addEventListener("mouseenter", () => {
@@ -63,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   carousel.addEventListener("mouseleave", () => {
-    interval = setInterval(nextSlide, 3000);
+    interval = setInterval(nextSlide, 4000);
   });
 
   // Keyboard navigation
