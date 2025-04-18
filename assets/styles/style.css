@@ -14,10 +14,15 @@ html {
 }
 
 section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
 }
 
 nav {
@@ -100,16 +105,17 @@ img {
   border: solid black;
   max-width: 100%;
   max-height: 65vh;
-  box-shadow: 4px 4px 5px black;
 }
 
 #main-image {
   vertical-align: center;
   margin-bottom: 20px;
   border-radius: 20px;
+  filter: drop-shadow(5px 10px 4px black);
 }
 
 #home-section {
+  flex-direction: column;
   background-color: bisque;
 }
 
@@ -126,6 +132,7 @@ img {
 
 #photos-section {
   background-color: bisque;
+  flex-direction: column;
 }
 
 .about-text {
@@ -146,7 +153,7 @@ img {
 .about-image img {
   max-width: 100%;
   max-height: 100%;
-  box-shadow: 3px 3px 5px black;
+  filter: drop-shadow(5px 10px 4px black);
   border: solid black;
 }
 
@@ -206,7 +213,7 @@ img {
 
 .carousel-container {
   border: solid black;
-  box-shadow: 3px 3px 8px black;
+  filter: drop-shadow(5px 10px 4px black);
   display: inline-block;
   width: 55vw;
   max-width: 80%;
@@ -214,6 +221,10 @@ img {
   overflow: hidden;
   margin: 30px auto;
   border-radius: 20px;
+}
+
+#photos-section img {
+  filter: drop-shadow(5px 10px 4px black);
 }
 
 .carousel {
@@ -281,7 +292,6 @@ img {
   max-width: 90vw;
   margin-top: 30px;
   border: solid black;
-  box-shadow: 3px 3px 8px black;
 }
 
 #photos-section > p {
@@ -289,7 +299,7 @@ img {
   max-width: 90vw;
   margin: 0 auto;
   font-size: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .photo-text a {
@@ -356,7 +366,6 @@ img {
     margin-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 90vh;
   }
   .about-image {
     max-width: 100%;
@@ -367,6 +376,11 @@ img {
   }
   h1 {
     font-size: 3.2rem;
+  }
+  section {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 80px;
   }
   .carousel-container {
     width: 95vw;
@@ -383,5 +397,8 @@ img {
   }
   .down-arrow {
     display: inline-block;
+  }
+  #home-section {
+    justify-content: start;
   }
 }
