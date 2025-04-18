@@ -104,18 +104,23 @@ img {
 #main-image img {
   max-width: 100%;
   max-height: 65vh;
-  display: block;
   width: 100%;
+  border-radius: 0;
+  height: 100%;
+  object-fit: cover;
 }
 
 #main-image {
   border: solid black;
-  vertical-align: center;
   margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 5px 5px 5px black;
   font-size: 0;
+  line-height: 0;
   overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  height: 65vh;
 }
 
 #home-section {
@@ -246,6 +251,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 0;
 }
 
 .carousel-btn {
@@ -410,5 +416,8 @@ img {
   }
   .photo-text {
     display: inline-block;
+  }
+  #main-image {
+    height: auto;
   }
 }
