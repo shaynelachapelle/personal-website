@@ -1,3 +1,36 @@
+//MOBILE ANIMATIONS
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".grow.underline-slide");
+  const isTouchDevice =
+    "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+  if (isTouchDevice) {
+    navItems.forEach((item) => {
+      let touchTimeout;
+
+      item.addEventListener("touchstart", function (e) {
+        this.classList.add("touch-hover");
+
+        // Clear any existing timeout
+        clearTimeout(touchTimeout);
+      });
+
+      item.addEventListener("touchend", function () {
+        // Keep animation for a short time, then remove
+        touchTimeout = setTimeout(() => {
+          this.classList.remove("touch-hover");
+        }, 300);
+      });
+
+      item.addEventListener("touchcancel", function () {
+        this.classList.remove("touch-hover");
+        clearTimeout(touchTimeout);
+      });
+    });
+  }
+});
+
+//CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
   const slides = document.querySelectorAll(".slide");

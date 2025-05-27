@@ -22,7 +22,7 @@ section {
   scroll-snap-stop: always;
   padding-top: 80px;
   padding-bottom: 80px;
-  width: 100%;
+  min-width: 100vw;
 }
 
 nav {
@@ -174,15 +174,6 @@ img {
   gap: 15px;
 }
 
-.grow {
-  display: inline-block;
-  transition: transform 0.3s ease, fill 0.3s ease;
-}
-
-.grow:hover {
-  transform: scale(1.2);
-}
-
 @keyframes pulse {
   0% {
     opacity: 1;
@@ -198,6 +189,16 @@ img {
 .pulse {
   display: inline-block;
   animation: pulse 1.5s infinite ease-in-out;
+}
+
+.grow {
+  display: inline-block;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.grow:hover,
+.grow.touch-hover {
+  transform: scale(1.2);
 }
 
 .underline-slide {
@@ -216,8 +217,19 @@ img {
   transition: width 0.3s ease;
 }
 
-.underline-slide:hover::after {
+.underline-slide:hover::after,
+.underline-slide.touch-hover::after {
   width: 100%;
+}
+
+/* Disable hover on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .grow:hover {
+    transform: none;
+  }
+  .underline-slide:hover::after {
+    width: 0%;
+  }
 }
 
 .carousel-container {
@@ -229,6 +241,7 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 #photos-section img {
@@ -322,7 +335,7 @@ img {
 .photo-text p {
   padding-top: 30px;
   padding-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .down-arrow {
