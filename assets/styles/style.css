@@ -241,7 +241,6 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  margin-bottom: 30px;
 }
 
 #photos-section img {
@@ -409,6 +408,7 @@ img {
   .carousel-container {
     width: 90vw;
     max-width: 100%;
+    margin-bottom: 30px;
   }
   .caption {
     display: none;
