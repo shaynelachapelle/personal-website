@@ -15,14 +15,20 @@ html {
 
 section {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   padding-top: 80px;
   padding-bottom: 80px;
   min-width: 100vw;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 nav {
@@ -97,6 +103,13 @@ img {
   justify-content: space-evenly;
 }
 
+.section-header {
+  top: 0;
+  display: none;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -126,6 +139,8 @@ img {
 #home-section {
   flex-direction: column;
   background-color: bisque;
+  justify-content: center;
+  align-items: center;
 }
 
 #about-section {
@@ -139,9 +154,29 @@ img {
   background-color: bisque;
 }
 
+#about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 #photos-section {
   background-color: bisque;
   flex-direction: column;
+}
+
+#photos-content {
+  flex-direction: column;
+}
+
+#projects-section {
+  flex-direction: column;
+}
+
+#projects-content {
 }
 
 .about-text {
@@ -243,7 +278,7 @@ img {
   border-radius: 20px;
 }
 
-#photos-section img {
+#photos-content img {
   box-shadow: 5px 5px 5px black;
 }
 
@@ -307,14 +342,14 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#photos-section > img {
+#photos-content > img {
   display: none;
   max-width: 90vw;
   border: solid black;
   height: auto;
 }
 
-#photos-section > p {
+#photos-content > p {
   display: none;
   max-width: 90vw;
   margin: 0 auto;
@@ -333,7 +368,6 @@ img {
 
 .photo-text p {
   padding-top: 30px;
-  padding-bottom: 30px;
   text-align: left;
 }
 
@@ -387,8 +421,13 @@ img {
 
 @media screen and (max-width: 900px) {
   #about-section {
-    gap: 20px;
+    gap: 0px;
     margin-top: 60px;
+  }
+  #about-content {
+    gap: 4rem;
+    flex-direction: column;
+    padding-bottom: 3rem;
   }
   .about-image {
     max-width: 100%;
@@ -413,18 +452,19 @@ img {
   .caption {
     display: none;
   }
-  #photos-section > img {
+  #photos-content {
+    padding-bottom: 6rem;
+  }
+  #photos-content > img {
     display: inline-block;
   }
-  #photos-section > p {
+  #photos-content > p {
     display: inline-block;
   }
   .down-arrow {
     display: inline-block;
   }
   #home-section {
-    padding-left: 10px;
-    padding-right: 10px;
     justify-content: start;
   }
   .photo-text {
@@ -435,5 +475,11 @@ img {
   }
   nav {
     display: none;
+  }
+  .section-header {
+    display: inline-block;
+  }
+  #projects-content {
+    padding-bottom: 6rem;
   }
 }
