@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".next");
   const caption = document.querySelector(".caption");
 
-  const captions = ["Banff 2024", "Banff 2024", "Banff 2024", "Banff 2024"];
+  //const captions = ["Banff 2024", "Banff 2024", "Banff 2024", "Banff 2024"];
 
   let currentIndex = 0;
 
@@ -72,7 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
   prevBtn.addEventListener("click", prevSlide);
   nextBtn.addEventListener("click", nextSlide);
 
-  // Auto-play (optional)
+  /*
+  // Auto-play
+  
   let interval = setInterval(nextSlide, 4000);
 
   // Pause auto-play on hover
@@ -83,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   carousel.addEventListener("mouseleave", () => {
     interval = setInterval(nextSlide, 4000);
   });
+  */
 
   // Keyboard navigation
   document.addEventListener("keydown", function (e) {
