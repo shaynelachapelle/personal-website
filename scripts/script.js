@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".next");
   const caption = document.querySelector(".caption");
 
-  //const captions = ["Banff 2024", "Banff 2024", "Banff 2024", "Banff 2024"];
+  const captions = ["Banff 2024", "Banff 2024", "Banff 2024", "Banff 2024"];
 
   let currentIndex = 0;
 
