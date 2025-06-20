@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /*
   // Auto-play
-  
+
   let interval = setInterval(nextSlide, 4000);
 
   // Pause auto-play on hover
@@ -117,4 +117,17 @@ document.addEventListener("DOMContentLoaded", function () {
       prevSlide(); // swipe right
     }
   }
+});
+
+//MAIN IMAGE SHINE ANIMATION
+const imageContainer = document.getElementById("main-image");
+
+imageContainer.addEventListener("mouseenter", () => {
+  // Add the animate class
+  imageContainer.classList.add("animate");
+
+  // Remove it after animation completes (to allow retrigger)
+  setTimeout(() => {
+    imageContainer.classList.remove("animate");
+  }, 850); // match duration of shine animation
 });
