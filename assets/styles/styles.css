@@ -63,7 +63,8 @@ body {
 
 @font-face {
   font-family: gWeiss;
-  src: url(../../assets/fonts/GABRWFFR.TTF);
+  src: url(../../assets/fonts/GABRWFFR.woff2) format("woff2");
+  font-display: swap;
 }
 
 h1 {
