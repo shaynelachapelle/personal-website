@@ -1,35 +1,3 @@
-//MOBILE ANIMATIONS
-document.addEventListener("DOMContentLoaded", function () {
-  const navItems = document.querySelectorAll(".grow.underline-slide");
-  const isTouchDevice =
-    "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-  if (isTouchDevice) {
-    navItems.forEach((item) => {
-      let touchTimeout;
-
-      item.addEventListener("touchstart", function (e) {
-        this.classList.add("touch-hover");
-
-        // Clear any existing timeout
-        clearTimeout(touchTimeout);
-      });
-
-      item.addEventListener("touchend", function () {
-        // Keep animation for a short time, then remove
-        touchTimeout = setTimeout(() => {
-          this.classList.remove("touch-hover");
-        }, 300);
-      });
-
-      item.addEventListener("touchcancel", function () {
-        this.classList.remove("touch-hover");
-        clearTimeout(touchTimeout);
-      });
-    });
-  }
-});
-
 //CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
@@ -37,17 +5,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
   const caption = document.querySelector(".caption");
+  const captionText = document.querySelector(".caption-text");
 
-  const captions = ["Banff 2024", "Banff 2024", "Banff 2024", "Banff 2024"];
+  const captions = [
+    ["Alberta 2024", "Johnston Canyon"],
+    ["Alberta 2024", "Johnston Canyon"],
+    ["Alberta 2024", "Lake Louise"],
+    ["New York 2025", "Central Park"],
+    ["New York 2025", "Central Park"],
+    ["Italy 2025", "Amalfi"],
+    ["Italy 2025", "Amalfi"],
+    ["Italy 2025", "Maiori"],
+    ["Costa Rica 2025", "Rio Colorado"],
+    ["Costa Rica 2025", "Rio Colorado"],
+    ["Costa Rica 2025", "Rio Colorado"],
+  ];
 
   let currentIndex = 0;
+
+  caption.textContent = captions[currentIndex][0];
+  captionText.textContent = captions[currentIndex][1];
 
   // Function to update the carousel
   function updateCarousel() {
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 
     // Update caption
-    caption.textContent = captions[currentIndex];
+    caption.textContent = captions[currentIndex][0];
+    captionText.textContent = captions[currentIndex][1];
   }
 
   // Function to go to a specific slide
