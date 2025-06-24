@@ -28,11 +28,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to update the carousel
   function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    const [newTitle, newSubtitle] = captions[currentIndex];
+    const prevTitle = caption.textContent;
+    const prevSubtitle = captionText.textContent;
 
-    // Update caption
-    caption.textContent = captions[currentIndex][0];
-    captionText.textContent = captions[currentIndex][1];
+    //Fade out caption
+    if (newTitle !== prevTitle) caption.classList.add("invisible");
+    if (newSubtitle !== prevSubtitle) captionText.classList.add("invisible");
+
+    setTimeout(() => {
+      //Change slide
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      // Update caption
+      caption.textContent = captions[currentIndex][0];
+      captionText.textContent = captions[currentIndex][1];
+
+      //Fade in new caption
+      if (newTitle !== prevTitle) caption.classList.remove("invisible");
+      if (newSubtitle !== prevSubtitle)
+        captionText.classList.remove("invisible");
+    }, 400);
   }
 
   // Function to go to a specific slide

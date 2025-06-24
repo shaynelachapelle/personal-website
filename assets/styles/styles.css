@@ -344,6 +344,26 @@ img {
 }
 
 .caption {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  text-align: left;
+}
+
+.caption.invisible {
+  transform: scale(0.98);
+  opacity: 0.1;
+  text-align: left;
+}
+
+.caption-text {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  text-align: left;
+}
+
+.caption-text.invisible {
+  transform: scale(0.98);
+  opacity: 0.1;
   text-align: left;
 }
 
