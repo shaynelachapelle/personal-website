@@ -10,7 +10,7 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  background-color: bisque;
+  background: linear-gradient(to right, bisque, #ffd8b1);
 }
 
 section {
@@ -40,9 +40,9 @@ nav {
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: bisque;
   z-index: 999;
   margin-top: 0;
+  background: linear-gradient(to right, bisque, #ffd8b1);
 }
 
 nav > * {
@@ -56,6 +56,7 @@ body {
   min-width: 100vw;
   height: 100vh;
   margin-top: 0;
+  background: linear-gradient(to right, bisque, #ffd8b1);
 }
 
 /* Hide scrollbar for all elements */
@@ -187,11 +188,11 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   display: flex;
   align-items: stretch;
   height: 65vh;
+  background-color: #6c747f;
 }
 
 #home-section {
   flex-direction: column;
-  background-color: bisque;
   justify-content: center;
   align-items: center;
 }
@@ -204,7 +205,6 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100vh;
-  background-color: bisque;
 }
 
 #about-content {
@@ -224,7 +224,6 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100vh;
-  background-color: bisque;
 }
 
 #photos-content {
