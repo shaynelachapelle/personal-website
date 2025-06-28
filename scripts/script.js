@@ -1,5 +1,9 @@
-//CAROUSEL
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
+});
+
 document.addEventListener("DOMContentLoaded", function () {
+  //CAROUSEL
   const carousel = document.querySelector(".carousel");
   const slides = document.querySelectorAll(".slide");
   const prevBtn = document.querySelector(".prev");
@@ -123,12 +127,31 @@ document.addEventListener("DOMContentLoaded", function () {
 //MAIN IMAGE SHINE ANIMATION
 const imageContainer = document.getElementById("main-image");
 
-imageContainer.addEventListener("mouseenter", () => {
-  // Add the animate class
-  imageContainer.classList.add("animate");
+let shineLocked = true; // Prevent early mouseenter triggers
 
-  // Remove it after animation completes (to allow retrigger)
+function triggerShine() {
+  if (shineLocked) return;
+
+  imageContainer.classList.add("animate");
   setTimeout(() => {
     imageContainer.classList.remove("animate");
-  }, 850); // match duration of shine animation
+  }, 850);
+}
+
+// Initial shine on load
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    imageContainer.classList.add("animate");
+
+    // Remove animation class after animation ends
+    setTimeout(() => {
+      imageContainer.classList.remove("animate");
+
+      // Unlock hover shine after initial animation is done
+      shineLocked = false;
+    }, 850);
+  }, 2000); // Initial delay
 });
+
+// Hover interaction
+imageContainer.addEventListener("mouseenter", triggerShine);

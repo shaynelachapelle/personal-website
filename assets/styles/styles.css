@@ -42,6 +42,7 @@ nav {
   height: 80px;
   background-color: bisque;
   z-index: 999;
+  margin-top: 0;
 }
 
 nav > * {
@@ -54,6 +55,7 @@ body {
   font-weight: 500;
   min-width: 100vw;
   height: 100vh;
+  margin-top: 0;
 }
 
 /* Hide scrollbar for all elements */
@@ -70,7 +72,8 @@ body {
 h1 {
   font-family: gWeiss;
   font-size: 3.8rem;
-  margin-top: 20px;
+  margin-top: 0;
+  padding-top: 20px;
   margin-bottom: 40px;
   text-shadow: #333 1px 1px 1px;
 }
@@ -86,6 +89,19 @@ img {
   display: block;
 }
 
+/*
+body.loaded .fade-in {
+  opacity: 0.2;
+  animation: fade-in 1.5s ease-in forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+*/
+
 .navigation a {
   text-decoration: none;
   color: inherit;
@@ -100,6 +116,41 @@ img {
   text-align: center;
   width: 100%;
   justify-content: space-evenly;
+}
+
+/* Fade-slide animation base */
+.nav-link {
+  opacity: 0;
+  display: inline-block; /* allow transform to work smoothly */
+  transform: translateX(-100vw); /* move off the screen to the left */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Apply staggered animation delays based on the parent <li> position */
+/* Animate each <li>'s anchor with a delay */
+body.loaded .navigation li:nth-child(1) .nav-link {
+  animation: fadeSlideIn 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+body.loaded .navigation li:nth-child(2) .nav-link {
+  animation: fadeSlideIn 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+body.loaded .navigation li:nth-child(3) .nav-link {
+  animation: fadeSlideIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+body.loaded .navigation li:nth-child(4) .nav-link {
+  animation: fadeSlideIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .section-header {
