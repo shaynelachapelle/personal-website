@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (newTitle !== prevTitle) caption.classList.remove("invisible");
       if (newSubtitle !== prevSubtitle)
         captionText.classList.remove("invisible");
-    }, 400);
+    }, 300);
   }
 
   // Function to go to a specific slide
@@ -155,3 +155,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Hover interaction
 imageContainer.addEventListener("mouseenter", triggerShine);
+
+//MAIN IMAGE BLUR LOAD
+const img = document.querySelector("#main-image img");
+if (img.complete) {
+  img.classList.add("loaded");
+} else {
+  img.addEventListener("load", () => img.classList.add("loaded"));
+}
