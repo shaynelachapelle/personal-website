@@ -229,6 +229,10 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   flex-wrap: wrap;
 }
 
+#about-content h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 #photos-section {
   display: flex;
   justify-content: center;
@@ -286,6 +290,10 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
+}
+
+#socials a {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 }
 
 @keyframes pulse {
