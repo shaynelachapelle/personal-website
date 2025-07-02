@@ -344,7 +344,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   width: 100%;
 }
 
-/* Disable hover on touch devices */
+/* Disable hover on touch devices 
 @media (hover: none) and (pointer: coarse) {
   .grow:hover {
     transform: none;
@@ -353,6 +353,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
     width: 0%;
   }
 }
+*/
 
 .carousel-container {
   display: flex;
@@ -507,6 +508,13 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   #photos-section {
     gap: 0px;
     margin-top: 60px;
+  }
+  /* disable hover effects on touch devices */
+  .grow:hover {
+    transform: none;
+  }
+  .underline-slide:hover::after {
+    width: 0%;
   }
 }
 
