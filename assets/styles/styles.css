@@ -17,11 +17,14 @@ html {
 section {
   display: flex;
   height: 100vh;
+  height: 100dvh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   padding-top: 80px;
   padding-bottom: 80px;
   min-width: 100vw;
+  min-width: 100dvw;
+  background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
 }
 
 .section-content {
@@ -43,11 +46,12 @@ nav {
   height: 80px;
   z-index: 999;
   margin-top: 0;
-  background: linear-gradient(to right, bisque, #ffd8b1);
+  background-image: url("https://www.transparenttextures.com/patterns/wavecut.png"),
+    linear-gradient(to right, bisque, #ffd8b1);
 }
 
 nav > * {
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1vw, 40px);
 }
 
 body {
@@ -55,9 +59,11 @@ body {
   font-family: "Poppins", serif;
   font-weight: 500;
   min-width: 100vw;
+  min-width: 100dvw;
   height: 100%;
   margin-top: 0;
-  background: linear-gradient(to right, bisque, #ffd8b1);
+  background-image: url("https://www.transparenttextures.com/patterns/wavecut.png"),
+    linear-gradient(to right, bisque, #ffd8b1);
 }
 
 /* Hide scrollbar for all elements */
@@ -73,7 +79,7 @@ body {
 
 h1 {
   font-family: gWeiss;
-  font-size: 3.8rem;
+  font-size: clamp(3rem, 4.5vw, 8rem);
   margin-top: 0;
   padding-top: 20px;
   margin-bottom: 40px;
@@ -196,6 +202,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   display: flex;
   align-items: stretch;
   height: auto;
+  width: clamp(340px, 50vw, 80vw);
   background-color: #6c747f;
 
   background-image: url(/assets/images/25310007-min.webp);
@@ -206,7 +213,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
 
 #home-section {
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -218,6 +225,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100vh;
+  height: 100dvh;
 }
 
 #about-content {
@@ -241,6 +249,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100vh;
+  height: 100dvh;
 }
 
 #photos-content {
@@ -566,9 +575,6 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   .text {
     max-width: 100%;
     font-size: 1rem;
-  }
-  h1 {
-    font-size: 3.2rem;
   }
   section {
     padding-left: 20px;
