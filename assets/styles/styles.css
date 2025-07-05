@@ -169,6 +169,22 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   padding-bottom: 20px;
   opacity: 0.7;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  display: inline-block; /* Needed to wrap inline spans */
+  white-space: nowrap;
+}
+
+.section-header span {
+  display: inline-block;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: fadeSlideIn 0.5s ease-out;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--i) * 0.08s);
+  animation-play-state: paused;
+}
+
+.section-header.in-view span {
+  animation-play-state: running;
 }
 
 .bold {
@@ -213,7 +229,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
 
 #home-section {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -455,7 +471,20 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   opacity: 0.7;
   color: inherit;
   font-family: Arial, Helvetica, sans-serif;
+  animation: floatDown 1.5s ease-in-out infinite;
   text-decoration: none;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .shine {
@@ -483,7 +512,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
 }
 
 .shine.animate::before {
-  animation: shine 0.85s;
+  animation: shine 1s;
 }
 
 @keyframes shine {
@@ -499,12 +528,21 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   display: none;
 }
 
+@media (min-width: 1024px) {
+  .section-header {
+    display: none !important;
+  }
+}
+
 /* tablets and mobile */
 @media (max-width: 1024px) {
   nav {
     display: none;
   }
   .section-header {
+    display: inline-block;
+  }
+  .section-header span {
     display: inline-block;
   }
   section {
@@ -524,6 +562,9 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   }
   .underline-slide:hover::after {
     width: 0%;
+  }
+  html {
+    scroll-snap-type: none;
   }
 }
 
@@ -573,7 +614,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
     max-width: 100%;
   }
   .text {
-    max-width: 100%;
+    min-width: 100%;
     font-size: 1rem;
   }
   section {
