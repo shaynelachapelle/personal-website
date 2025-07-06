@@ -2,6 +2,13 @@ window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
 });
 
+function enableHover() {
+  document.body.classList.add("has-hover");
+  window.removeEventListener("mousemove", enableHover);
+}
+
+window.addEventListener("mousemove", enableHover);
+
 document.addEventListener("DOMContentLoaded", function () {
   //CAROUSEL
   const carousel = document.querySelector(".carousel");
@@ -10,6 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".next");
   const caption = document.querySelector(".caption");
   const captionText = document.querySelector(".caption-text");
+  const buttons = document.querySelectorAll(".carousel-btn");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.remove("bounce");
+      void btn.offsetWidth; // Trigger reflow to restart animation
+      btn.classList.add("bounce");
+    });
+  });
 
   const captions = [
     ["Alberta 2024", "Johnston Canyon"],
