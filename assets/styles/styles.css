@@ -77,7 +77,7 @@ body {
 
 h1 {
   font-family: gWeiss;
-  font-size: clamp(3rem, 3.5vw, 4rem);
+  font-size: clamp(48px, 4vw, 4rem);
   margin-top: 0;
   padding-top: 20px;
   margin-bottom: 40px;
@@ -305,6 +305,9 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   margin: 20px;
   padding: 20px;
   box-shadow: 5px 5px 5px black;
+  background: none;
+  background-color: bisque;
+  background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
 }
 
 .project-tile img {
@@ -513,6 +516,17 @@ body.has-hover .carousel-btn:hover {
 
 .next {
   right: 10px;
+}
+
+.prev,
+.next {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.7;
+}
+
+.prev:hover,
+.next:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .caption,

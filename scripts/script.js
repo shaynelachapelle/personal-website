@@ -170,7 +170,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Hover interaction
-imageContainer.addEventListener("mouseenter", triggerShine);
+//imageContainer.addEventListener("mouseenter", triggerShine);
 
 //MAIN IMAGE BLUR LOAD
 const img = document.querySelector("#main-image img");
