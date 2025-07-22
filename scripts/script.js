@@ -248,3 +248,18 @@ document.addEventListener("DOMContentLoaded", () => {
   handleResize(); // Initial check
   window.addEventListener("resize", handleResize);
 });
+
+//BIRD ANIMATION
+const bird = document.getElementById("bird");
+function flyBird() {
+  bird.classList.remove("fly"); // Reset animation
+  void bird.offsetWidth; // Force reflow to restart animation
+  bird.classList.add("fly");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    flyBird();
+    setInterval(flyBird, 20000);
+  }, 2000);
+});

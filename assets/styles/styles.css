@@ -214,7 +214,7 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   border: solid black;
   margin-bottom: 20px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.8);
   font-size: 0;
   line-height: 0;
   overflow: hidden;
@@ -228,6 +228,37 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  position: relative;
+
+  transition: 0.4s ease-in-out;
+}
+
+#main-image:hover {
+  box-shadow: 5px 5px 6px black;
+}
+
+#bird {
+  position: absolute;
+  top: -10%;
+  left: -100px;
+  opacity: 1;
+}
+
+.fly {
+  transform: scale(0.075);
+  animation: fly-across 14s linear forwards;
+}
+
+@keyframes fly-across {
+  0% {
+    left: -60%;
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+    opacity: 0.8;
+  }
 }
 
 #home-section {
@@ -305,10 +336,16 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   border-radius: 20px;
   margin: 20px;
   padding: 20px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.8);
   background: none;
   background-color: bisque;
   background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
+
+  transition: 0.4s ease-in-out;
+}
+
+.project-tile:hover {
+  box-shadow: 5px 5px 6px black;
 }
 
 .project-tile img {
@@ -350,15 +387,24 @@ body.loaded .navigation li:nth-child(4) .nav-link {
 }
 
 .about-image {
+  aspect-ratio: 3/2;
   max-width: 40%;
   max-height: 100%;
+  background-color: #6c747f;
+  border-radius: 20px;
 }
 
 .about-image img {
   max-width: 100%;
   max-height: 100%;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.8);
   border: solid black;
+
+  transition: 0.4s ease-in-out;
+}
+
+.about-image img:hover {
+  box-shadow: 5px 5px 6px black;
 }
 
 #socials,
@@ -442,12 +488,18 @@ body.loaded .navigation li:nth-child(4) .nav-link {
 .carousel-container {
   display: flex;
   border: solid black;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.8);
   display: inline-block;
   max-width: 40%;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+
+  transition: 0.4s ease-in-out;
+}
+
+.carousel-container:hover {
+  box-shadow: 5px 5px 6px black;
 }
 
 .carousel {
