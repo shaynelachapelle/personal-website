@@ -344,6 +344,10 @@ body.loaded .navigation li:nth-child(4) .nav-link {
   transition: 0.4s ease-in-out;
 }
 
+.project-tile span {
+  font-weight: bold;
+}
+
 .project-tile:hover {
   box-shadow: 5px 5px 6px black;
 }
@@ -367,6 +371,10 @@ body.loaded .navigation li:nth-child(4) .nav-link {
 
 .project-tile p {
   font-size: clamp(0.9rem, 1.15rem, 1.25rem);
+}
+
+.project-image {
+  object-fit: contain;
 }
 
 .text {

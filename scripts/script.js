@@ -159,11 +159,9 @@ window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     imageContainer.classList.add("animate");
 
-    // Remove animation class after animation ends
     setTimeout(() => {
       imageContainer.classList.remove("animate");
 
-      // Unlock hover shine after initial animation is done
       shineLocked = false;
     }, 850);
   }, 2000); // Initial delay

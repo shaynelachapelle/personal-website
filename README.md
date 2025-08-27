@@ -2,7 +2,7 @@
 
 My personal website, built as a hands-on project to learn the fundamentals of web development and design while showcasing a bit about myself!
 
-**Note:** This project is still a work in progress...
+**Note:** I plan on rebuilding this project using React and TailwindCSS in the future...
 
 ## 📌 Features
 
