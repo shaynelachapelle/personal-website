@@ -2,7 +2,7 @@
 
 My personal website, built as a hands-on project to learn the fundamentals of web development and design while showcasing a bit about myself!
 
-**Note:** Rebuilt with React and TailwindCSS (https://www.shaynelachapelle.com/)
+**Note:** Rebuilt with React and TailwindCSS (https://github.com/shaynelachapelle/personal-website-v2)
 
 ## 📌 Features
 
