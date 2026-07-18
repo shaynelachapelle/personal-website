@@ -1,8 +1,8 @@
-# 🚀 Personal Website - https://shaynelachapelle.com
+# 🚀 Personal Website v1
 
 My personal website, built as a hands-on project to learn the fundamentals of web development and design while showcasing a bit about myself!
 
-**Note:** I plan on rebuilding this project using React and TailwindCSS in the future...
+**Note:** Rebuilt with React and TailwindCSS (https://www.shaynelachapelle.com/)
 
 ## 📌 Features
 
